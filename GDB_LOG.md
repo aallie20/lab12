@@ -55,10 +55,38 @@ Hangman::Hangman
 
 `print hangman` (paste it):
 
+$1 = {
+  <Game> = {
+    m_title = "Hangman",
+    m_last_score = 0
+  },
+  members of Hangman:
+  m_times_played = 0
+}
+
 `print *g` (paste it):
+
+$2 = {
+  m_title = "Hangman",
+  m_last_score = 0
+}
 
 What is different, and why:
 
+print hangman showed both the inherited Game members and Hangman's own m_times_played member. print *g showed only the Game portion of the object because g is a Game pointer, so GDB displays the object through the base-class type.
+
 `ptype Hangman` and `ptype g` (paste them):
 
+type = class Hangman : public Game {
+    int m_times_played;
+
+  public:
+    Hangman(void);
+    void play(void);
+    int times_played(void) const;
+}
+
 One sentence on what `ptype Hangman` revealed about inheritance:
+
+ptype Hangman revealed that Hangman publicly inherits from Game and adds its own m_times_played data member while also inheriting Game's members and member functions.
+

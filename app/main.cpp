@@ -52,6 +52,10 @@ int main() {
     Minesweeper minesweeper;
     Dungeon dungeon;
     Blackjack blackjack;
+    
+    Game *g = &hangman;
+    (void)g;
+
 
   while (true) {
     print_menu();
