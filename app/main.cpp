@@ -50,6 +50,8 @@ int main() {
 
     Hangman hangman;
     Minesweeper minesweeper;
+    Dungeon dungeon;
+    Blackjack blackjack;
 
   while (true) {
     print_menu();
@@ -67,10 +69,12 @@ int main() {
       break;
 
     case Choice::dungeon:
-      report_score(play_dungeon());
+      dungeon.play();
+      report_score(dungeon.last_score());
       break;
     case Choice::blackjack:
-      report_score(play_blackjack());
+      blackjack.play();
+      report_score(blackjack.play_score());
       break;
     case Choice::minesweeper:
       minesweeper.play();
