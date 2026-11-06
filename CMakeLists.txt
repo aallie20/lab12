@@ -35,6 +35,8 @@ add_library(arcade_lib STATIC
     src/game.cpp
     src/hangman_game.cpp
     src/minesweeper_game.cpp
+    src/blackjack_game.cpp
+    src/dungeon_game.cpp
     src/room.cpp
 )
 target_include_directories(arcade_lib PUBLIC include)
