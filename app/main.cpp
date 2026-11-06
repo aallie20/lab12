@@ -63,7 +63,7 @@ int main() {
     switch (choice) {
     case Choice::hangman:
       hangman.play();
-      report_score(play_hangman());
+      report_score(hangman.last_score());
       break;
 
     case Choice::dungeon:
@@ -73,8 +73,8 @@ int main() {
       report_score(play_blackjack());
       break;
     case Choice::minesweeper:
-      minesweeper.play()
-      report_score(play_minesweeper());
+      minesweeper.play();
+      report_score(minesweeper.last_score());
       break;
     case Choice::quit:
       break;
