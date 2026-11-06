@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string>
 
-#include "blackjack.h"
-#include "dungeon.h"
+#include "blackjack_game.h"
+#include "dungeon_game.h"
 #include "hangman_game.h"
 #include "input.h"
 #include "minesweeper_game.h"
@@ -74,7 +74,7 @@ int main() {
       break;
     case Choice::blackjack:
       blackjack.play();
-      report_score(blackjack.play_score());
+      report_score(blackjack.last_score());
       break;
     case Choice::minesweeper:
       minesweeper.play();
